@@ -56,7 +56,7 @@ config = {
                     ],
     "datasets": {
         "root": "data/perturb",
-        # "root": "data/processed",
+        "root": "data/processed",
         "dataset_name_regex": r".*\.csv$",
         "file_list": []
     },
