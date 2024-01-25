@@ -218,8 +218,6 @@ class BERTScorer:
             idf_dict[self._tokenizer.sep_token_id] = 0
             idf_dict[self._tokenizer.cls_token_id] = 0
 
-        # 假设all_layers为True，则返回格式为(layer_num, sample_num, 3)
-        # 3对应P, R, F
         all_preds = bert_cos_score_idf(
             self._model,
             refs,

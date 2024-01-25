@@ -4,7 +4,6 @@ from collections import defaultdict
 from metrics.BARTScore.bart_score import BARTScorer
 from metrics.BERTScore.scorer import BERTScorer
 from metrics.UniEval.evaluator import get_evaluator
-from metrics.CTRLEval.ctrleval import CTRLEval
 from metrics.GPTScore.opt_score import OPTScorer
 from metrics.MoverScore.moverscore import MoverScorer
 from tqdm import tqdm
@@ -340,7 +339,7 @@ class GPTScoreScorer(Scorer):
 class MoverScoreScorer(Scorer):
     def __init__(self,config):
         self.scorer = MoverScorer(config)
-        # 如果将来要用v2再改
+
         self.checkpoint = config["checkpoint"]
         self.score_type = config["score_type"]
     

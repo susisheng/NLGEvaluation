@@ -59,12 +59,6 @@ class BARTScorer:
                     tgt_mask = encoded_tgt['attention_mask']
                     tgt_len = tgt_mask.sum(dim=1).to(self.device)
 
-                    # 这里labels是tgt_tokens shift_right的结果
-                    # decoder_input_ids = shift_tokens_right(
-                    #     labels, self.config.pad_token_id, self.config.decoder_start_token_id
-                    # )
-                    # 因此output.logits的长度和label(tgt_tokens)的长度是一样的
-                    # 所以可以直接计算loss
                     output = self.model(
                         input_ids=src_tokens,
                         attention_mask=src_mask,
