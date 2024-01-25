@@ -52,12 +52,7 @@ config = {
         }
     },
     "metric_list": [
-        # "gptscore", 
-        # "moverscore", 
-        # "ctrleval",
-        #   "bartscore", 
-        "unieval", 
-        # "bertscore", "rouge", "meteor", "bleu"
+        "gptscore", "moverscore", "bartscore", "unieval", "bertscore", "rouge", "meteor", "bleu"
                     ],
     "datasets": {
         "root": "data/perturb",
