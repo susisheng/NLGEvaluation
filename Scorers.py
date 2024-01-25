@@ -339,7 +339,7 @@ class GPTScoreScorer(Scorer):
 class MoverScoreScorer(Scorer):
     def __init__(self,config):
         self.scorer = MoverScorer(config)
-
+        # 如果将来要用v2再改
         self.checkpoint = config["checkpoint"]
         self.score_type = config["score_type"]
     
