@@ -27,10 +27,6 @@ class UniEvaluator:
             Get scores for the given samples.
             final_score = postive_score / (postive_score + negative_score)
         """
-
-        # The implementation of "forward" in T5 still requires decoder_input_ids.
-        # Therefore, we construct a random one-word target sequence.
-        # The content of the target has no effect on the final scores.
         tgts = ["No" for _ in range(len(inputs))]
 
         pos_score_list, neg_score_list = [], []
